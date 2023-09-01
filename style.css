@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-bootstrap {
+    width: 500px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+form input  {
+    margin-bottom: 5px;
+}
+
+.form-check {
+    margin: 15px 15px 15px 15px;
+}
