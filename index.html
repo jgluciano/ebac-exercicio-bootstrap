@@ -3,49 +3,231 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice - BootStrap</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
       rel="stylesheet"
     />
-    <title>BootStrap EBAC</title>
-    <link
-      rel="stylesheet"
-      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="./lib/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="row form-bootstrap">
-        <div class="col">
-
-        <h2>BootStrap Form</h2>
-
-          <form>
-            <label class="form-label" for="nome">Full name:</label>
-            <input type="text" class="form-control" type="text" id="nome" required placeholder="Enter your full name"/>
-            <label for="email" class="form-label">E-mail:</label>
-            <input type="email" id="email" class="form-control" required placeholder="Enter a valid email"/>
-            <label for="tel" class="form-label">Phone number:</label>
-            <input type="number" id="tel" class="form-control" required placeholder="Enter your phone number"></textarea>
-            <div class="form-check form-switch">
-              <label class="form-check-label" for="accept-terms"
-                >I have read and agree to the website terms</label
-              >
-              <input
-                class="form-check-input"
-                type="checkbox"
-                id="accept-terms"
-              />
-            </div>
-            <button class="btn btn-success">Submit Form</button>
-          </form>
+    <header id="cabecario">
+      <div class="container">
+        <div class="navbar navbar-expand-lg">
+          <img class="logo-menu" src="./img/logoebac.png" />
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav class="collapse navbar-collapse justify-content-end" id="menu">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="navbar nav-link active" href="#inicio">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar nav-link" href="#produtos">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar nav-link" href="#novidades">Novidades</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#cabecario">
+      <section id="inicio"></section>
+      <div>
+        <div
+          id="carousel-loja"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div data-bs-interval="3100" class="carousel-item active">
+              <img class="d-block w-100" src="./img/banner-1.png" />
+            </div>
+
+            <div data-bs-interval="3100" class="carousel-item">
+              <img class="d-block w-100" src="./img/banner-2.png" />
+            </div>
+          </div>
+          <button
+            data-bs-target="#carousel-loja"
+            data-bs-slide="prev"
+            class="carousel-control-prev"
+            type="button"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            data-bs-target="#carousel-loja"
+            data-bs-slide="next"
+            class="carousel-control-next"
+            type="button"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel-loja"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel-loja"
+              data-bs-slide-to="1"
+            ></button>
+          </div>
+        </div>
+      </div>
+
+      <section id="produtos">
+        <div class="tittle-section">
+          <h2>Produtos</h2>
+          <span class="tittle-line"></span>
+        </div>
+
+        <div class="container all-products col-md-10">
+          <div class="card products">
+            <img src="./img/produto-1.png" />
+            <div class="card">
+              <h3 class="card-title">Regata Básica Ribana</h3>
+              <div class="card-text price-products">
+                <span class="price">R$ 65,01</span>
+                <p class="promotional_products">
+                  ou <b>6x</b> de <b>R$ 11,65</b>
+                </p>
+                <a href="#" class="btn-card btn"
+                  >Adicionar ao carrinho</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card products">
+            <img src="./img/produto-2.png" />
+            <div class="card">
+              <h3 class="card-title">Cropped De Linho</h3>
+              <div class="card-text price-products">
+                <span class="price">R$ 92,91</span>
+                <p class="promotional_products">
+                  ou <b>6x</b> de <b>R$ R$ 16,65</b>
+                </p>
+                <a href="#" class="btn-card btn"
+                  >Adicionar ao carrinho</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card products">
+            <img src="./img/produto-3.png" />
+            <div class="card">
+              <h3 class="card-title">Blazer Alongado Em Linho</h3>
+              <div class="card-text price-products">
+                <span class="price">R$ 232,41</span>
+                <p class="promotional_products">
+                  ou <b>6x</b> de <b>R$ 41,65</b>
+                </p>
+                <a href="#" class="btn-card btn"
+                  >Adicionar ao carrinho</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card products">
+            <img src="./img/produto-4.png" />
+            <div class="card">
+              <h3 class="card-title">Croppde De Linho</h3>
+              <div class="card-text price-products">
+                <span class="price">R$ 83,61</span>
+                <p class="promotional_products">
+                  ou <b>6x</b> de <b>R$ 11,65</b>
+                </p>
+                <a href="#" class="btn-card btn"
+                  >Adicionar ao carrinho</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card products">
+            <img src="./img/produto-5.png" />
+            <div class="card">
+              <h3 class="card-title">Regata Ribana Canelada</h3>
+              <div class="card-text price-products">
+                <span class="price">R$ 65,01</span>
+                <p class="promotional_products">
+                  ou <b>6x</b> de <b>R$ 41,65</b>
+                </p>
+                <a href="#" class="btn-card btn"
+                  >Adicionar ao carrinho</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card products">
+            <img src="./img/produto-6.png" />
+            <div class="card">
+              <h3 class="card-title">Calça Jogger de Linho</h3>
+              <div class="card-text price-products">
+                <span class="price">R$ 185,91</span>
+                <p class="promotional_products">
+                  ou <b>6x</b> de <b>R$ 33,32</b>
+                </p>
+                <a href="#" class="btn-card btn"
+                  >Adicionar ao carrinho</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <img class="banner-app" src="./img/banner-app1.png" />
+        </div>
+      </section>
+
+      <section id="novidades">
+        <div class="tittle-section">
+          <h2>Novidades</h2>
+          <span class="tittle-line"></span>
+        </div>
+        
+        <div class="container img-novidades">
+          <img src="./img/novidades-1.png">
+          <img src="./img/novidades-2.png">
+          <img src="./img/novidades-3.png">
+          <img src="./img/novidades-4.png">
+        </div>
+
+
+      </section>
+
+      <footer>
+        <div class="rodape">
+          <a>© EBAC - All rights reserved - 2023</a>
+        </div>
+      </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
   </body>
 </html>
